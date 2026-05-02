@@ -1,118 +1,90 @@
-# ![ExecuStra Banner](assets/banner.png)
+# ExecuStra: Adaptive Life Operating System
 
-# ExecuStra: The Elite Life Operating System
-### **"Clarity is the ultimate sophisticated weapon. Own yours."**
-
-ExecuStra is not just another task manager. It is a **high-fidelity, psychologically-aware execution system** designed for those who demand absolute clarity and uncompromising performance. By leveraging a network of specialized AI agents, ExecuStra transforms the chaos of ambition into a precision-engineered daily roadmap.
+ExecuStra is a high-performance, psychologically-aware life operating system. It moves beyond standard task management by utilizing an adaptive execution loop that calibrates daily roadmaps based on user consistency, cognitive load, and real-time performance velocity.
 
 ---
 
-## ⚡ The Adaptive Execution Loop
-Stop overthinking. Start executing. Our system recalibrates your path in real-time based on your cognitive load and performance velocity.
+## ⚡ System Architecture & Execution Flow
+
+The platform operates on a feedback loop designed to prevent burnout while maximizing output.
 
 ```mermaid
 graph TD
     A[Global Goal Profile] --> B[Planner Agent]
     B --> C[Daily Precision Tasks]
-    C --> D[User Execution]
+    C --> D[User Execution & Focus Mode]
     D --> E[Behavioral Evaluator]
     E --> F{Performance Delta}
-    F -->|High Momentum| G[Calibrate Up]
+    F -->|High Momentum| G[Calibrate Up Difficulty]
     F -->|Recovery Needed| H[Simplify Path]
     G --> C
     H --> C
-    D --> I[Reflection Neural-Net]
+    D --> I[Reflection & Sentiment]
     I --> B
 ```
 
-### **Core Behavioral Intelligence**
-| Metric | Purpose | Target Level |
-| :--- | :--- | :--- |
-| **Execution Score** | Real-time completion velocity | **> 85%** |
-| **Clarity Index** | Goal alignment & focus depth | **Elite** |
-| **Resilience Multiplier** | Recovery speed after missed days | **1.2x** |
-| **Cognitive Load** | System-driven decision reduction | **Minimum** |
+### **Core Capabilities**
+*   **Dynamic Task Generation**: Personalized daily tasks based on defined professional goals (e.g., AI Engineer, Data Scientist).
+*   **Execution Tracking**: Real-time progress rings, streak calculation, and completion velocity metrics.
+*   **Deep Focus Engine**: Integrated Pomodoro timer for calibrated cognitive endurance.
+*   **Midnight Glass UI**: A professional, distraction-free aesthetic utilizing obsidian palettes and fluid Framer Motion animations.
+*   **Unified Deployment**: A streamlined architecture serving both the FastAPI backend and React frontend via a single Dockerized web service.
 
 ---
 
-## 💎 Midnight Glass Aesthetics
-**Deep Focus is the New Luxury.**
-Experience a workspace designed for deep cognitive flow. Our "Midnight Glass" interface uses an obsidian-dark palette and glassmorphism elements to eliminate visual noise and center your consciousness on the task at hand.
+## 🛠️ Technical Stack
 
-![ExecuStra Dashboard Mockup](assets/dashboard.png)
+**Frontend Framework**
+*   **Core**: React 19, Vite
+*   **Styling**: TailwindCSS, Framer Motion
+*   **State Management**: React Context API
+*   **Icons**: Lucide React
 
-### **Key Performance Modules:**
-*   **Precision Pomodoro:** Calibrated for elite cognitive endurance.
-*   **Circular Execution Rings:** High-fidelity visual feedback on your daily momentum.
-*   **Execution Heatmap:** A professional 6-month visualization of your consistency.
-*   **Ambient Soundscapes:** Integrated audio environments (Lofi, Rain, Silence).
+**Backend Infrastructure**
+*   **Core**: FastAPI (Python 3.11)
+*   **Validation**: Pydantic V2
+*   **Server**: Uvicorn
+*   **Database (Planned/Integration)**: Supabase
 
----
-
-## 🧠 AI Agent Network (Core Intelligence)
-The backend is powered by 5 specialized agents working in high-speed parallel to ensure you never have to plan your own growth again:
-1.  **Planner Agent:** High-level roadmap synthesis and long-term goal decomposition.
-2.  **Task Generator:** Daily micro-action contextualization for immediate execution.
-3.  **Evaluator Agent:** Statistical performance recognition and pattern analysis.
-4.  **Adaptation Agent:** Dynamic difficulty scaling based on real-time behavioral data.
-5.  **Reflection Analyzer:** Psychological blocker extraction and sentiment processing.
+**Deployment & DevOps**
+*   **Platform**: Render
+*   **Containerization**: Docker (Multi-stage build)
+*   **Routing**: Unified SPA fallback routing via FastAPI
 
 ---
 
-## 🛠️ System Architecture
-```mermaid
-classDiagram
-    class UserProfile {
-        +String goal
-        +String consistencyLevel
-        +String[] blockers
-    }
-    class TaskEngine {
-        +generateTasks()
-        +completeTask()
-        +calculateEfficiency()
-    }
-    class AIAgentCore {
-        +analyzeBehavior()
-        +calibrateDifficulty()
-    }
-    UserProfile --> AIAgentCore : High-Fidelity Data
-    AIAgentCore --> TaskEngine : Influences
-    TaskEngine --> UserProfile : Updates Neural-State
+## 🚀 Setup & Local Execution
+
+ExecuStra is designed as a Monorepo. You can run the unified application locally or build the separate environments.
+
+### **Unified Docker Execution (Production Mirror)**
+```bash
+# Build the unified container
+docker build -t execustra-app .
+
+# Run the application
+docker run -p 10000:10000 execustra-app
+```
+*The application will be accessible at `http://localhost:10000`.*
+
+### **Local Development (Split Servers)**
+
+**1. Backend (FastAPI)**
+```bash
+cd backend
+pip install -r requirements.txt
+uvicorn app.main:app --reload --port 8000
+```
+
+**2. Frontend (React + Vite)**
+```bash
+cd frontend
+npm install
+npm run dev
 ```
 
 ---
 
 ## 👤 The Architect
 **[Mano Shruthi S](https://github.com/ManoShruthiS)**
-*Architecting the future of human execution through high-fidelity systems.*
-
----
-
-<details>
-<summary>Technical Specifications & Stack</summary>
-
-- **Architecture:** Monorepo (FastAPI + React)
-- **Frontend:** React 18, Vite, TailwindCSS (Custom Theme), Framer Motion.
-- **Backend:** FastAPI (Python 3.10+), Pydantic V2, Uvicorn.
-- **AI Logic:** Specialized Rule-based Agents (Designed for LLM plug-and-play).
-- **Design System:** Midnight Glass (Obsidian Dark Theme).
-
-### **Setup & Execution**
-```bash
-# 1. Clone the repository
-git clone https://github.com/ManoShruthiS/Execustra.git
-
-# 2. Backend Initialization
-cd backend
-pip install -r requirements.txt
-uvicorn app.main:app --reload
-
-# 3. Frontend Initialization
-cd ../frontend
-npm install
-npm run dev
-```
-</details>
-
----
+*Lead Developer & System Architect*
