@@ -1,3 +1,17 @@
+<div align="center">
+  <img src="assets/banner.svg" alt="ExecuStra Banner" width="100%">
+  
+  <br />
+  
+  <!-- Shields.io Badges -->
+  <img src="https://img.shields.io/badge/Status-Live%20on%20Render-10b981?style=for-the-badge&logo=render&logoColor=white" alt="Live Status" />
+  <img src="https://img.shields.io/badge/Frontend-React%2019-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React 19" />
+  <img src="https://img.shields.io/badge/Backend-FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" />
+  <img src="https://img.shields.io/badge/Deploy-Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
+</div>
+
+<br />
+
 # ExecuStra: Adaptive Life Operating System
 
 ExecuStra is a high-performance, psychologically-aware life operating system. It moves beyond standard task management by utilizing an adaptive execution loop that calibrates daily roadmaps based on user consistency, cognitive load, and real-time performance velocity.
