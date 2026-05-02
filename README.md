@@ -1,82 +1,65 @@
-# ExecuStra — Transform Confusion into Absolute Clarity
+# ![ExecuStra Banner](assets/banner.png)
 
-### **You don't need another task manager. You need an Operating System for your life.**
+# ExecuStra: The Elite Life Operating System
+### **"Clarity is the ultimate sophisticated weapon. Own yours."**
 
-ExecuStra is a high-fidelity, psychologically-aware execution system designed to bridge the gap between your highest goals and your daily reality. It removes decision fatigue by delivering a minimal, high-impact daily system that adapts to your performance and mental state.
+ExecuStra is not just another task manager. It is a **high-fidelity, psychologically-aware execution system** designed for those who demand absolute clarity and uncompromising performance. By leveraging a network of specialized AI agents, ExecuStra transforms the chaos of ambition into a precision-engineered daily roadmap.
 
 ---
 
-## 📊 System Intelligence & Analytics
-
-### **The Adaptive Execution Loop**
-ExecuStra operates on a continuous feedback loop between your actions and our AI core.
+## ⚡ The Adaptive Execution Loop
+Stop overthinking. Start executing. Our system recalibrates your path in real-time based on your cognitive load and performance velocity.
 
 ```mermaid
 graph TD
-    A[User Profile & Goal] --> B[Planner Agent]
-    B --> C[Daily Task Generator]
+    A[Global Goal Profile] --> B[Planner Agent]
+    B --> C[Daily Precision Tasks]
     C --> D[User Execution]
-    D --> E[Evaluator Agent]
-    E --> F{Performance Check}
-    F -->|Consistency High| G[Scale Difficulty Up]
-    F -->|Consistency Low| H[Simplify Path]
+    D --> E[Behavioral Evaluator]
+    E --> F{Performance Delta}
+    F -->|High Momentum| G[Calibrate Up]
+    F -->|Recovery Needed| H[Simplify Path]
     G --> C
     H --> C
-    D --> I[Reflection Analyzer]
+    D --> I[Reflection Neural-Net]
     I --> B
 ```
 
-### **Core Behavioral Metrics**
+### **Core Behavioral Intelligence**
 | Metric | Purpose | Target Level |
 | :--- | :--- | :--- |
-| **Execution Score** | Real-time completion velocity | > 85% |
-| **Clarity Index** | Goal alignment & focus depth | High |
-| **Resilience Multiplier** | Recovery speed after missed days | 1.2x |
-| **Cognitive Load** | System-driven decision reduction | Minimum |
+| **Execution Score** | Real-time completion velocity | **> 85%** |
+| **Clarity Index** | Goal alignment & focus depth | **Elite** |
+| **Resilience Multiplier** | Recovery speed after missed days | **1.2x** |
+| **Cognitive Load** | System-driven decision reduction | **Minimum** |
 
 ---
 
-## ⚡ The Solution: Adaptive Execution
+## 💎 Midnight Glass Aesthetics
+**Deep Focus is the New Luxury.**
+Experience a workspace designed for deep cognitive flow. Our "Midnight Glass" interface uses an obsidian-dark palette and glassmorphism elements to eliminate visual noise and center your consciousness on the task at hand.
 
-### **1. AI Agent Network**
-The backend is powered by 5 specialized agents that work in parallel to ensure you never have to plan your own growth again.
+![ExecuStra Dashboard Mockup](assets/dashboard.png)
 
-*   **Planner Agent:** `[Roadmap Generation]`
-*   **Task Generator:** `[Daily Micro-Action Synthesis]`
-*   **Evaluator Agent:** `[Performance Pattern Recognition]`
-*   **Adaptation Agent:** `[Dynamic Difficulty Scaling]`
-*   **Reflection Analyzer:** `[Psychological Blocker Extraction]`
-
-### **2. Visual Execution Analytics**
-Track your evolution with high-density data visualizations integrated directly into your workspace.
-
-**Monthly Consistency Trend**
-`[ ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ ] 92%`
-
-**Daily Focus Allocation**
-- **Skill Acquisition:** `██████████░░░░░ 65%`
-- **Knowledge Base:** `██████░░░░░░░░░ 40%`
-- **Mindset/Reflection:** `████████░░░░░░░ 55%`
+### **Key Performance Modules:**
+*   **Precision Pomodoro:** Calibrated for elite cognitive endurance.
+*   **Circular Execution Rings:** High-fidelity visual feedback on your daily momentum.
+*   **Execution Heatmap:** A professional 6-month visualization of your consistency.
+*   **Ambient Soundscapes:** Integrated audio environments (Lofi, Rain, Silence).
 
 ---
 
-## 💎 Elite Product Features
-
-### **🌑 Midnight Glass Aesthetics**
-Experience a workspace designed for deep focus. Our "Midnight Glass" interface uses a minimalist, obsidian-dark palette to reduce visual noise and promote entry into the Flow State.
-
-### **🌊 Immersive Focus Suite**
-- **Precision Pomodoro:** Calibrated for maximum cognitive endurance.
-- **Ambient Soundscapes:** Choose between `Lofi`, `Rain`, or `Silence`.
-- **Session Visualization:** Real-time progress rings and efficiency tracking.
-
-### **📈 Execution Heatmap**
-A professional 6-month visualization of your consistency. See your transformation from an "Overthinker" to an "Elite Executor" through a GitHub-style performance grid.
+## 🧠 AI Agent Network (Core Intelligence)
+The backend is powered by 5 specialized agents working in high-speed parallel to ensure you never have to plan your own growth again:
+1.  **Planner Agent:** High-level roadmap synthesis and long-term goal decomposition.
+2.  **Task Generator:** Daily micro-action contextualization for immediate execution.
+3.  **Evaluator Agent:** Statistical performance recognition and pattern analysis.
+4.  **Adaptation Agent:** Dynamic difficulty scaling based on real-time behavioral data.
+5.  **Reflection Analyzer:** Psychological blocker extraction and sentiment processing.
 
 ---
 
-## 🛠️ Technical Architecture
-
+## 🛠️ System Architecture
 ```mermaid
 classDiagram
     class UserProfile {
@@ -93,35 +76,43 @@ classDiagram
         +analyzeBehavior()
         +calibrateDifficulty()
     }
-    UserProfile --> AIAgentCore : Feeds Data
+    UserProfile --> AIAgentCore : High-Fidelity Data
     AIAgentCore --> TaskEngine : Influences
-    TaskEngine --> UserProfile : Updates Status
+    TaskEngine --> UserProfile : Updates Neural-State
 ```
 
 ---
 
-### **Stop dreaming. Start executing.**
-**[Mano Shruthi S](https://github.com/ManoShruthiS)** — *Architecting the future of human execution.*
+## 👤 The Architect
+**[Mano Shruthi S](https://github.com/ManoShruthiS)**
+*Architecting the future of human execution through high-fidelity systems.*
 
 ---
 
 <details>
-<summary>Technical Specifications (Deep Dive)</summary>
+<summary>Technical Specifications & Stack</summary>
 
-#### **System Vitals**
 - **Architecture:** Monorepo (FastAPI + React)
-- **Frontend Core:** Vite, React 18, TailwindCSS, Framer Motion
-- **Backend Core:** Python 3.10+, Pydantic V2, Uvicorn
-- **Logic:** Rule-based AI Agents (Designed for LLM plug-and-play)
-- **Design System:** Midnight Glass (Obsidian Dark Theme)
+- **Frontend:** React 18, Vite, TailwindCSS (Custom Theme), Framer Motion.
+- **Backend:** FastAPI (Python 3.10+), Pydantic V2, Uvicorn.
+- **AI Logic:** Specialized Rule-based Agents (Designed for LLM plug-and-play).
+- **Design System:** Midnight Glass (Obsidian Dark Theme).
 
-#### **Agent Capabilities**
-| Agent | Primary Logic | Output |
-| :--- | :--- | :--- |
-| Planner | Goal Decomposition | 4-Week Roadmap |
-| Task Gen | Contextual Micro-actions | 1-3 Daily Tasks |
-| Evaluator | Statistical Regression | Completion Trends |
-| Adaptation | Pressure Regulation | Difficulty Offset |
-| Reflection | Sentiment & NLP | Blocker List |
+### **Setup & Execution**
+```bash
+# 1. Clone the repository
+git clone https://github.com/ManoShruthiS/Execustra.git
 
+# 2. Backend Initialization
+cd backend
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+
+# 3. Frontend Initialization
+cd ../frontend
+npm install
+npm run dev
+```
 </details>
+
+---

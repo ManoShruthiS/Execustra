@@ -62,6 +62,7 @@ export default function ProfilePage() {
           <p className="text-2xl font-bold">{totalCompleted}</p>
           <p className="text-xs text-text-muted">Tasks Done</p>
         </div>
+      </motion.div>
       {/* Secondary Stats Row */}
       <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
         <div className="bg-surface/30 border border-border/50 rounded-2xl p-4">
