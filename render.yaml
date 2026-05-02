@@ -21,14 +21,14 @@ services:
         value: "*" # Update this to your frontend URL after deployment
 
   # Frontend Service (Static Site)
-  - type: static_site
+  - type: web
     name: execustra-frontend
     env: static
     region: oregon
     plan: free
     rootDir: frontend
     buildCommand: npm install && npm run build
-    publishDir: dist
+    staticPublishPath: dist
     headers:
       - path: /*
         name: Cache-Control
