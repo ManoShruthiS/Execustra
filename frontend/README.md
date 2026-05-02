@@ -1,16 +1,55 @@
-# React + Vite
+# 🖥️ ExecuStra: Frontend Architecture
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This directory contains the user interface and client-side logic for the **ExecuStra Adaptive Life OS**. Designed with the "Midnight Glass" aesthetic, this frontend delivers a premium, highly responsive, and distraction-free experience optimized for elite cognitive performance.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 💎 Design Philosophy: Midnight Glass
+The UI is engineered to minimize cognitive load while maximizing focus. We utilize a dark, obsidian-based color palette coupled with subtle glassmorphism effects (`backdrop-blur`) and vibrant accent colors (emerald, neon blue, and warnings) to guide the user's attention.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack & Tooling
+*   **Core Framework**: React 19 + Vite (for ultra-fast HMR and optimized builds)
+*   **Styling Engine**: TailwindCSS
+*   **Animations**: Framer Motion (for fluid micro-interactions and the Execution Progress Ring)
+*   **Icons**: Lucide React (clean, consistent vector icons)
+*   **Routing**: React Router DOM
+*   **State Management**: React Context API (`TaskContext`, `AuthContext`)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📂 Structure Overview
+*   `src/components/`: Reusable UI elements (Buttons, Layouts, Navigation).
+*   `src/pages/`: Main route views (Dashboard, Focus, Reflection, Profile, Onboarding).
+*   `src/context/`: Global state providers handling authentication and task generation logic.
+*   `src/index.css`: Global design tokens, CSS variables, and custom Tailwind utility layers.
+
+---
+
+## 🚀 Local Development Setup
+
+### Prerequisites
+Ensure you have **Node.js** (v18+) installed on your machine.
+
+### 1. Install Dependencies
+```bash
+npm install
+```
+
+### 2. Start the Development Server
+```bash
+npm run dev
+```
+This will launch the Vite development server, typically accessible at `http://localhost:5173`.
+
+### 3. Build for Production
+To create an optimized production build (which will be served by the FastAPI backend in the unified deployment):
+```bash
+npm run build
+```
+The compiled assets will be generated in the `dist/` directory.
+
+---
+
+*For backend and system-wide documentation, refer to the [Main Project README](../README.md).*
