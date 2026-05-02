@@ -12,8 +12,9 @@ export default function DashboardPage() {
   const navigate = useNavigate()
   const rate = getCompletionRate()
   const streak = getStreak()
-  const done = tasks.filter(t => t.status === 'completed').length
-  const total = tasks.length
+  const safeTasks = Array.isArray(tasks) ? tasks : []
+  const done = safeTasks.filter(t => t?.status === 'completed').length
+  const total = safeTasks.length
   const hour = new Date().getHours()
   const greet = hour < 12 ? 'Good morning' : hour < 17 ? 'Good afternoon' : 'Good evening'
   const today = new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })
@@ -104,7 +105,7 @@ export default function DashboardPage() {
           <h2 className="text-xl font-semibold flex items-center gap-2"><Sparkles size={20} className="text-accent" />Today's Tasks</h2>
         </div>
         <div className="space-y-3">
-          {tasks.map((task, i) => (
+          {safeTasks.map((task, i) => (
             <motion.div key={task.id} initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 + i * 0.1 }}
               className={`glass-card p-5 flex items-start gap-4 group ${task.status === 'completed' ? 'opacity-60' : ''}`}>
               <button onClick={() => task.status === 'pending' && completeTask(task.id)} disabled={task.status !== 'pending'} className="mt-0.5 flex-shrink-0" id={`task-${i}-toggle`}>

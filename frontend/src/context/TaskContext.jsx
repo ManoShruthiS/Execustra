@@ -104,7 +104,8 @@ export function TaskProvider({ children }) {
 
   const completeTask = (taskId) => {
     setTasks(prev => {
-      const updated = prev.map(t =>
+      const prevTasks = Array.isArray(prev) ? prev : [];
+      const updated = prevTasks.map(t =>
         t.id === taskId
           ? { ...t, status: 'completed', completedAt: new Date().toISOString() }
           : t
@@ -116,7 +117,8 @@ export function TaskProvider({ children }) {
 
   const skipTask = (taskId) => {
     setTasks(prev => {
-      const updated = prev.map(t =>
+      const prevTasks = Array.isArray(prev) ? prev : [];
+      const updated = prevTasks.map(t =>
         t.id === taskId ? { ...t, status: 'skipped' } : t
       )
       localStorage.setItem('execustra_tasks', JSON.stringify(updated))
@@ -125,26 +127,30 @@ export function TaskProvider({ children }) {
   }
 
   const getCompletionRate = () => {
-    if (tasks.length === 0) return 0
-    const completed = tasks.filter(t => t.status === 'completed').length
-    return Math.round((completed / tasks.length) * 100)
+    const safeTasks = Array.isArray(tasks) ? tasks : [];
+    if (safeTasks.length === 0) return 0
+    const completed = safeTasks.filter(t => t?.status === 'completed').length
+    return Math.round((completed / safeTasks.length) * 100)
   }
 
   const getStreak = () => {
     let streak = 0
-    const sortedHistory = [...taskHistory].sort((a, b) =>
+    const safeHistory = Array.isArray(taskHistory) ? taskHistory : [];
+    const sortedHistory = [...safeHistory].sort((a, b) =>
       new Date(b.date) - new Date(a.date)
     )
     for (const day of sortedHistory) {
-      const completed = day.tasks.filter(t => t.status === 'completed').length
-      if (completed >= Math.ceil(day.tasks.length / 2)) {
+      const safeDayTasks = Array.isArray(day?.tasks) ? day.tasks : [];
+      const completed = safeDayTasks.filter(t => t?.status === 'completed').length
+      if (safeDayTasks.length > 0 && completed >= Math.ceil(safeDayTasks.length / 2)) {
         streak++
       } else {
         break
       }
     }
     // Include today if some tasks completed
-    const todayCompleted = tasks.filter(t => t.status === 'completed').length
+    const safeTasks = Array.isArray(tasks) ? tasks : [];
+    const todayCompleted = safeTasks.filter(t => t?.status === 'completed').length
     if (todayCompleted > 0) streak++
     return streak
   }
