@@ -163,6 +163,7 @@ export function TaskProvider({ children }) {
       skipTask,
       getCompletionRate,
       getStreak,
+      dailyQuote,
     }}>
       {children}
     </TaskContext.Provider>
