@@ -21,7 +21,7 @@ services:
         value: "*" # Update this to your frontend URL after deployment
 
   # Frontend Service (Static Site)
-  - type: static
+  - type: static_site
     name: execustra-frontend
     env: static
     region: oregon
