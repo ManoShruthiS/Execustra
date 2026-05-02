@@ -105,8 +105,8 @@ export default function DashboardPage() {
           <h2 className="text-xl font-semibold flex items-center gap-2"><Sparkles size={20} className="text-accent" />Today's Tasks</h2>
         </div>
         <div className="space-y-3">
-          {safeTasks.map((task, i) => (
-            <motion.div key={task.id} initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 + i * 0.1 }}
+          {safeTasks.filter(t => t).map((task, i) => (
+            <motion.div key={task.id || i} initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 + i * 0.1 }}
               className={`glass-card p-5 flex items-start gap-4 group ${task.status === 'completed' ? 'opacity-60' : ''}`}>
               <button onClick={() => task.status === 'pending' && completeTask(task.id)} disabled={task.status !== 'pending'} className="mt-0.5 flex-shrink-0" id={`task-${i}-toggle`}>
                 {task.status === 'completed' ? <CheckCircle2 size={22} className="text-success" /> : task.status === 'skipped' ? <XCircle size={22} className="text-text-muted" /> : <Circle size={22} className="text-text-muted group-hover:text-accent transition-colors" />}
@@ -114,8 +114,8 @@ export default function DashboardPage() {
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-3 mb-1">
                   <div className="flex items-center gap-1.5">
-                    <span className="text-sm">{catIcons[task.category]}</span>
-                    <span className="text-[10px] text-text-muted uppercase tracking-wider font-mono">{task.category}</span>
+                    <span className="text-sm">{catIcons[task.category] || '📌'}</span>
+                    <span className="text-[10px] text-text-muted uppercase tracking-wider font-mono">{task.category || 'task'}</span>
                   </div>
                   {task.difficulty && (
                     <span className={`text-[10px] px-2 py-0.5 rounded-full font-mono font-medium ${diffColors[task.difficulty]}`}>
@@ -126,7 +126,7 @@ export default function DashboardPage() {
                 <p className={`font-medium ${task.status === 'completed' ? 'line-through text-text-muted' : ''}`}>{task.text}</p>
               </div>
               <div className="flex items-center gap-3 flex-shrink-0">
-                <span className="flex items-center gap-1.5 text-xs text-text-muted"><Clock size={14} />{task.duration}</span>
+                <span className="flex items-center gap-1.5 text-xs text-text-muted"><Clock size={14} />{task.duration || 'N/A'}</span>
                 {task.status === 'pending' && (
                   <div className="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
                     <button onClick={() => navigate('/focus', { state: { task } })} className="p-2 rounded-lg hover:bg-accent-glow text-text-muted hover:text-accent transition-all" title="Focus"><Target size={16} /></button>
